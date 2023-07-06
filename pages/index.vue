@@ -1,5 +1,9 @@
+<script setup>
+const showComponent = ref(true);
+</script>
 <template>
   <div>
-    <ServerComponent />
+    <button @click="showComponent = !showComponent">toggle</button>
+    <ServerComponent v-if="showComponent" />
   </div>
 </template>
